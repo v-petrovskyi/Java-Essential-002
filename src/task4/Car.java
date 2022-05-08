@@ -6,19 +6,29 @@ class Car {
     int weight;
     String color;
 
-    public Car(double v, int i, String red) {
+    Car(){
+        this(1995, 358d,1253,"RED");
     }
 
-    public Car(int year, double speed, int weight, String color) {
+    Car(int year) {
+        this( year, 358.5d,1254,"RED-BLUE" );
+    }
+
+    Car(int year, double speed){
+        this(year, speed, 1255,"White");
+    }
+
+    Car(int year, double speed, int weight){
+        this(year, speed, weight, "Black");
+    }
+
+    Car(int year, double speed, int weight, String color) {
         this.year = year;
         this.speed = speed;
         this.weight = weight;
         this.color = color;
     }
-    public Car(int year){
-        this(358d,165,"RED");
-        this.year =year;
-    }
+
 
     @Override
     public String toString() {
